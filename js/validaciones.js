@@ -1,4 +1,4 @@
-function validar_nombre_usuario(string){
+function validar_nombre_usuario(nombre){
 
 }
 
@@ -6,10 +6,8 @@ function validar_anoNacimiento_usuario(){
 
 }
 
-function validar_contrasena(string){
+function validar_contrasena(contrasena){
 
 }
 
-module.exports.validar_nombre_usuario = validar_nombre_usuario;
-module.exports.validar_anoNacimiento_usuario = validar_anoNacimiento_usuario;
-module.exports.validar_contrasena = validar_contrasena;
+console.log(document.getElementById('nombre_usuario'));

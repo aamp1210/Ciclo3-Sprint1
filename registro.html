@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/validaciones.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -13,15 +14,15 @@
         <h2> Iniciar sesión</h2>
         <br>
         <div>
-            <input type="text" id="nombre_usuario" placeholder="Ingresa tu usuario">
+            <input type="text" id="nombre_usuario" name="nombre" placeholder="Ingresa tu usuario" onblur="validar_nombre_usuario()">
         </div>
         <br>
         <div>
-            <input type="password" id="contrasena_usuario" placeholder="Ingresa tu contraseña">
+            <input type="password" id="contrasena_usuario" name="pass" placeholder="Ingresa tu contraseña" onblur="validar_contrasena()">
         </div>
         <br>
         <div> Año de nacimiento
-            <input id="anoNacimiento_usuario" type="number" min ="1900" max="2021">
+            <input type="number" id="anoNacimiento_usuario" name="fecha" onblur="validar_anoNacimiento_usuario()">
         </div>  
         <br>
         <div class="Enviar">
