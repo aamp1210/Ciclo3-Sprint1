@@ -10,24 +10,24 @@
 </head>
 <body>
     <section>
-        <form id = "registrar_usuario_form" >   
-        <h2> Iniciar sesión</h2>
-        <br>
-        <div>
-            <input type="text" id="nombre_usuario" name="nombre" placeholder="Ingresa tu usuario" onblur="validar_nombre_usuario()">
-        </div>
-        <br>
-        <div>
-            <input type="password" id="contrasena_usuario" name="pass" placeholder="Ingresa tu contraseña" onblur="validar_contrasena()">
-        </div>
-        <br>
-        <div> Año de nacimiento
-            <input type="number" id="anoNacimiento_usuario" name="fecha" onblur="validar_anoNacimiento_usuario()">
-        </div>  
-        <br>
-        <div class="Enviar">
-            <button id="enviar_registro">Enviar</button>
-        </div>
+        <form id = "registrar_usuario_form">   
+            <h2> Iniciar sesión</h2>
+            <br>
+            <div>
+                <input type="text" id="nombre_usuario" name="nombre" placeholder="Ingresa tu usuario" onblur="validar_nombre_usuario(value)">
+            </div>
+            <br>
+            <div>
+                <input type="password" id="contrasena_usuario" name="pass" placeholder="Ingresa tu contraseña">
+            </div>
+            <br>
+            <div>
+                <input type="number" id="anoNacimiento_usuario" name="fecha" onblur="validar_anoNacimiento_usuario(value)">
+            </div>  
+            <br>
+            <div class="Enviar">
+                <button id="enviar_registro">Enviar</button>
+            </div>
         </form>
     </section>
     <footer class="footer2">
