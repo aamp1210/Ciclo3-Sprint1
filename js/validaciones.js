@@ -19,55 +19,25 @@ module.exports.validar_anoNacimiento_usuario = validar_anoNacimiento_usuario; */
 
 let registros = []; 
 
-/* function obtenerNombre(){
-    var name = document.getElementById("nombre_usuario").value;
-    return name;
-}
-
-function obtenerContraseña(){
-    var password = document.getElementById("contrasena_usuario").value;
-    return password;
-}
-
-function obtenerAño(){
-    var year = document.getElementById("anoNacimiento_usuario").value;
-    return year;
-}
-
-function Usuario(name,password,year){
-    this.name = name;
-    this.password = password;
-    this.year = year;
-} */
-
 function agregarRegistro(){
     var name = document.getElementById("nombre_usuario").value;
     var password = document.getElementById("contrasena_usuario").value;
     var year = document.getElementById("anoNacimiento_usuario").value;
-    var user = {name: name, password: password, year: year};
-    registros.push(user);
+    registros.push({usuario: name, anoNacimiento: year, contrasena: password});
 }
 
 function EncontrarUsuarioPorEdad(arreglo){
-    var edad = 2022;
-    var count = 0;
-    var posicion = 0;
-    for (let index = 0; index < arreglo.length; index++) {
-        if (arreglo[index].year <= edad ) {
-            edad = arreglo[index].year;
-            count++;
-            posicion = index;
+    var age = 2022;
+    var position = 0;
+    for (var index = 0; index < arreglo.length; index++) {
+        if (arreglo[index].anoNacimiento <= age ) {
+            age = arreglo[index].anoNacimiento;
+            position = index;
         }
     }
-    if (count === 1){
-        console.log(arreglo[posicion]);
-        return arreglo[posicion];
-    }else{
-        arreglo.reverse();
-        var user = arreglo.find(Usuario => Usuario.year === edad)
-        console.log(user);
-        return user;
-    }
+    var usuariomayor = registros[position];
+    console.log(usuariomayor);
+    return usuariomayor;
 }
 
 module.exports.registros = registros;
