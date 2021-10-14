@@ -5,33 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>
-    <section>
-        <form id = "registrar_usuario_form" onsubmit="return agregarRegistro()">
-            <h2> Iniciar sesión</h2>
-            <br>
-            <div>
-                <input type="text" id="nombre_usuario" name="nombre" placeholder="Ingresa tu usuario" onblur="validar_nombre_usuario(value)">
+    <div class="container-lg">
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="nombre_usuario" aria-describedby="emailHelp" onblur="validar_nombre_usuario(value)">
+                <div id="emailHelp" class="form-text">La primera letra debe ser mayúscula.</div>
             </div>
-            <br>
-            <div>
-                <input type="password" id="contrasena_usuario" name="pass" placeholder="Ingresa tu contraseña">
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena_usuario" onblur="validar_contrasena(value)">
             </div>
-            <br>
-            <div>
-                <input type="number" id="anoNacimiento_usuario" name="fecha" onblur="validar_anoNacimiento_usuario(value)">
-            </div>  
-            <br>
-            <div class="Enviar">
-                <button id="enviar_registro">Enviar</button>
+            <div class="mb-3">
+                <label for="">Año nacimiento</label>
+                <input type="number" class="form-control" id="anoNacimiento_usuario" onblur="validar_anoNacimiento_usuario(value)">
             </div>
-        </form>
-    </section>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1 ">
+                <label class="form-check-label" for="exampleCheck1">Aceptar terminos y condiciones.</label>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="agregarRegistro()">Enviar</button>
+          </form>
+    </div>
     <footer class="footer2">
         
     </footer>
     <script src="js/validaciones.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
